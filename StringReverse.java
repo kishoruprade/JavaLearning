@@ -1,26 +1,18 @@
-package practicePrograms;
+package infostretch;
 
 public class StringReverse {
 
 	public static void main(String[] args) {
-	String s = "Welcome Selenium";
-	String s1 = "KadaK";
+		String s = "Welcome to JavatPoint";
+		String[] ss = s.split("\\s");
+		
+		for (int i = 0;i<ss.length;i++){
+			for (int j=ss[i].length()-1;j>=0;j--){
+				System.out.print(ss[i].charAt(j));
+			}
+			System.out.print(" ");
+		}
 
-	
-	//Reverse the String using String Builder
-	StringBuilder sb = new StringBuilder("Welcome");
-	System.out.println(sb.reverse());
-	
-	String reverse = "";
-	
-	for(int i=s1.length()-1;i>=0;i--) //using for loop
-	{
-		reverse += s1.charAt(i);
 	}
-	System.out.println(reverse);
-	
-	
-	}
-	
-	
+
 }

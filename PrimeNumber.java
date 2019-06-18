@@ -1,30 +1,27 @@
-package auto.interview.testprograms;
+package infostretch;
 
-import java.util.Scanner;
-
+// 24 May 2019
 public class PrimeNumber {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Enter any integer value: ");
-		int input = scan.nextInt();
-		if (checkPrime(input)){		
-			System.out.println("Input value "+input + " is a prime number.");
-		}		else {
-			System.out.println("Input value "+ input + " is not a prime number");
-		}
-
-	}
-	public static boolean checkPrime(int n){
-		if (n<=1){
-			return false;
-		}
-		for (int i=2;i<Math.sqrt(n);i++){
-			if (n% i ==0){
-				return false;
+		int a = 29;
+		int flag = 0;
+		
+		if (a<2){
+			System.out.println("Number is not prime number" + a);
+		}else {
+			for (int i=2;i<a;i++){
+				if (a%i==0){
+					flag = flag +1;
+				}
 			}
 		}
-		return true;
+		if (flag==0){
+			System.out.println("Number is prime number" + a);
+		}else {
+			System.out.println("Number is not prime" + a);
+		}
+
 	}
 
 }
