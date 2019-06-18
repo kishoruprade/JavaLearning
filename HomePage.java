@@ -1,7 +1,17 @@
-package com.crm.qa.pages;
+package mercury.pages;
 
-import com.crm.qa.base.TestBase;
+import mercury.base.TestBase;
 
 public class HomePage extends TestBase{
+	
+	public String FlightConfirmation(){
+		  return driver.getTitle();
+		}    
+	    
+		
+		public String validateFlightConfirmationPage() {
+			return driver.getTitle();		
+		}
+
 
 }

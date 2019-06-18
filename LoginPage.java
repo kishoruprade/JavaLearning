@@ -1,51 +1,46 @@
-package com.crm.qa.pages;
+package mercury.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.crm.qa.base.TestBase;
+import mercury.base.TestBase;
 
-public class LoginPage extends TestBase {
+public class LoginPage extends TestBase{
 	
-	//PageFactory or Object Repositories(OR)
-	@FindBy(name="username")
+	// Pagefactory of Login page or Object Repository
+	
+	@FindBy(name="userName")
 	WebElement username;
 	
 	@FindBy(name="password")
 	WebElement password;
 	
-	@FindBy(xpath="//input[@type='submit']")
+	@FindBy(name="login")
 	WebElement loginBtn;
 	
-	@FindBy(xpath="//button[contains(text(),'Sign Up')]")
-	WebElement signUpBtn;
-	
-	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
-	WebElement crmLogo;
-	
-	//Initialization of Page Objects
-	public LoginPage(){
-		PageFactory.initElements(driver, this);
-	}
-	
+	// Initialization of Page Objects
+	public LoginPage(){		
+		PageFactory.initElements(driver, this);		
+		}
+
 	//Actions
-	public String validateLoginPageTitle(){
-		return driver.getTitle();
+	public String validateLoginPageTitle() {
+		return driver.getTitle();		
 	}
 	
-	public boolean validateCRMLogo(){
-		return crmLogo.isDisplayed();
-	}
-	
-	public HomePage login(String un, String pwd){
+	public FlightFinderPage login(String un, String pwd){
 		username.sendKeys(un);
 		password.sendKeys(pwd);
 		loginBtn.click();
-		
-		return new HomePage();
+		return new FlightFinderPage();                  //This will return all home page class objects
 	}
+		
 	
+
+//    System.out.println(driver.getTitle());
+//	
 	
 
 }
