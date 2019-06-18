@@ -1,54 +1,36 @@
-package Oops;
+package functionPkg;
 
 public class FunctionClass {
 
 	public static void main(String[] args) {
-		FunctionClass obj = new FunctionClass();
-		//one object will be created by is  the reference "obj" is the reference name
-		obj.test();
-		
-		int addnum = obj.add();
-		System.out.println(addnum);
-		
-		int num = obj.division(15, 3);
-		System.out.println(num);
-		
-		String s1 = obj.name();
-		System.out.println(s1);
-		
-
-	}
-	//non-static methods
-	
-	//void -- does not return anything
-	//return type --void
-	public void test(){   //no input no output
-		System.out.println("test method");
-	}
-	
-	//this will return integer value
-	//return type int
-	// 
-	public int add(){   //no input some output
+		System.out.println("calling function");		
+		add();
 		int a = 10;
-		int b = 20;
-		int c = a+b;
-		return c;
-	}
-	
-	//return type  - String
-	public String name(){   //no input some output
-		String s = "Selenium";
-		System.out.println("qa method");
-		return s;
-	}
-	
-	//return type integer
-	public int division(int x, int y){  //provided input and will get some output
-		System.out.println("division method");
-		int d = x/y;
+		FunctionClass instance = new FunctionClass();
 		
-		return d;
 	}
-
+	public void substract()
+	{
+		System.out.println("substracts");
+	}
+	//specifier, Modifier, return type, method name --Signature of 
+	public static void add() {
+		System.out.println("in add");
+	}
+	public static int add1()
+	{
+	System.out.println("");
+	return 1;
+	}
+	public static void add2(int a, int b)
+	{
+		System.out.println(" a in add" +(a+b));
+	}
+	
+	
+	//Opps 
+	
 }
+	
+
+

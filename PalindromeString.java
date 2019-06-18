@@ -1,25 +1,25 @@
-package stringPractice;
+package stringExamples;
 
 public class PalindromeString {
 
 	public static void main(String[] args) {
-		String s = "Madam";
-		String palString = "";
-		
-		for (int i=s.length()-1;i>=0;i--){
-			palString = palString + s.charAt(i);
+		String s1="nitin";
+		for(int i=0;i<s1.length();i++)
+		{
+		   if(s1.charAt(i)==s1.charAt(s1.length()-1-i))
+		   {
+			   if(i==s1.length()-1)
+			   {
+				   System.out.println(s1+" is a palindrome string");
+				   break;
+			   }
+		   }else
+		   {
+			   System.out.println(s1+" is not a palindrome string");
+			   break;
+		   }
 			
 		}
-		
-		System.out.println(palString);
-		if (palString.equalsIgnoreCase(s)){
-			System.out.println("String is palindrome");
-		}else{
-			System.out.println("String is not palindrome");
-		}
-		
-		
-
 	}
 
 }

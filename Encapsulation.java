@@ -1,12 +1,18 @@
+package encapsulation;
 
 public class Encapsulation {
-	private double pie = 3.14;
-	public double getPI(){
-		return pie;
+	private int a;
+
+	public int geta(){
+		return a;
 	}
-   
+	public void seta(int a){
+		this.a=a;
+	}
+	
+	
 }
- class AccessEncapulation extends Encapsulation{
-	 Encapsulation obj = new Encapsulation();
-	// obj.getPI();//
- }
+class AccessEncapsulation{
+	public void add(){}
+	
+}

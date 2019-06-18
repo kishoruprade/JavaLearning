@@ -1,27 +1,23 @@
-package encapsulation;
+package polymorphism;
 
 public class MethodOverloading {
-	int a;
-
-	public static void main(String[] args) {
-		MethodOverloading methOverload = new MethodOverloading();
-		methOverload.add();
-		methOverload.add(10);
-
-	}
+	//Rule: 1within a same class
+	void add(){	}
 	
-	public void add(){
-		int a =1 ;
-		int b = 3;
-		int c;
-		c = a+b;
-		
-		
-	}
-	public int add(int a){
-		this.a = a;
-		System.out.println("abc");
-		return a;
-	}
+	//Rule 2: same method but different # of parameter (# = numbers)
+	void add(int a){}
+	void add(int a, int b){}
+	void add(int a, int b, int c){}
+	
+	//Rule 3: same method name, same # of parameters, order is different
+	void add(String a, int b){}
+	void add(int b, String a){}
+	
+	
+	//Rule 4: same method name, same # of parameters, data type is different
+	//char add(char a, char b){}
+	
+	//Rule 5: Return type does not matters
+	//void add(char a, char b){}
 
 }

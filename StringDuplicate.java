@@ -1,29 +1,32 @@
-package string;
+package javaString;
 
 public class StringDuplicate {
 
 	public static void main(String[] args) {
-		String a = "ABCD";
-		char[] ca = a.toCharArray();
+		//  Write a java program to find duplicate characters in a string?
 		
-		String b = "CD";
-		char[] cb = b.toCharArray();
-		String str = " ";
-
-		// Logic for checking duplicate string in another string
-		for (int i=0;i<a.length();i++){		
-			for (int j=0;j<b.length();j++){
-				if (ca[i]==cb[j]){
-				System.out.print(cb[j]);
+		String s =  "ajava";
+		char[] ch = s.toCharArray();
+		int count ;
+		
+		for (int i = 0;i<s.length();i++)
+		{
+			for (int j = 1; j<i;j++)
+			{
+				if(ch[i]==ch[j])
+				{
+					System.out.println(ch[i]);
+					System.out.println("duplicate");
+					count = ch[i];
 				}
-			}			
+				
+				
+				
+			}
+			
 		}
-		System.out.println();
-		//Logic to reverse the string
-		for (int i=a.length()-1;i>=0;i--){
-			System.out.print(ca[i]);
-		}
-	
+		
+
 	}
 
 }

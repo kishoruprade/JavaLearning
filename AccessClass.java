@@ -1,17 +1,18 @@
-package packageTwo;
+package functionPkg;
 
-public class AccessClass {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-
+public class AccessClass 
+{
+	public static void staticMethod()
+	{
+		System.out.println(StaticClass.staticVar);
+		InstanceClass inst = new InstanceClass();
+		System.out.println(inst.nonStatVar);
 	}
-	static void getAccess(){   //calls GetToolMethod from ToolClass
-		System.out.println();
-	}
-	void setAccess(){  //calls getseleniumMEthod from Selenium
-		  
+	public void nonStaticMethod()
+	{
+		System.out.println(StaticClass.staticVar);
+		InstanceClass inst = new InstanceClass();
+		System.out.println(inst.nonStatVar);
 	}
 
 }

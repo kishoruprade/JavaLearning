@@ -1,28 +1,27 @@
-package inheritance;
-
-
-
-class A
+package abstraction;
+interface eatable
 {
-	public A()
-	{
-		System.out.println(1);
-	}
-}
-class B extends A
+default void eat()
 {
-	public B()
-	{
-		System.out.println(2);
-	}
+System.out.println("eating");	
 }
-public class Test {
-
+void abstractMethod();
+static void A1()
+{
+System.out.println("print the message");	
+}
+}
+public class Test implements eatable
+{
+public void abstractMethod()
+{
+	System.out.println("Abstract method");
+}
 	public static void main(String[] args) {
-		//B ref=new B();
-		
-	
-		
+		Test obj=new Test();
+		obj.eat();
+		eatable.A1();
+		obj.abstractMethod();
 	}
 
 }

@@ -1,30 +1,31 @@
-package interfacePackage;
-interface It6
+package abstraction;
+interface drawable2
 {
+default void defaultMethod()
+{
+System.out.println("Default method");	
+}
+static void StaticMethod()
+{
+System.out.println("static method");	
+}
+void run();
+}
+
+public class DefaultMethod implements drawable2 {
 	
-//private void m1();
-default void m2()
-{
-System.out.println("I am in default method");	
-}
-public static int cube(int x)
-{
-return x*x*x;	
-}
-
-}
-
-public class DefaultMethod implements It6
-{
-public void m1()
-{
-System.out.println("m1-method");	
-}
-	public static void main(String[] args)
+	public void run()
 	{
-	  DefaultMethod obj=new DefaultMethod();
-	  obj.m1();obj.m2();
-	  System.out.println(It6.cube(2));
+		System.out.println("Implemented method");
+		
+	}
+
+	public static void main(String[] args) {
+		DefaultMethod d1=new DefaultMethod();
+		d1.defaultMethod();
+		d1.run();
+		drawable2.StaticMethod();
+		
 
 	}
 
