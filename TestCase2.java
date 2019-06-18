@@ -1,0 +1,51 @@
+/*
+ * Test Case-2:  
+3.	Open webpage http://newtours.demoaut.com/mercuryregister.php
+4.	Enter Your Name on text box.
+5.	Enter Your Last name on text box.
+6.	Enter Your Phone No on text box.
+7.	Enter Your Address on text box.
+8.	Enter Your city.
+9.	Enter Your State/Province.
+10.	Enter Your Postal Code.
+11.	Enter Your Country.
+12.	Enter Your Username
+13.	Enter Your Password
+14.	Confirm Password.
+
+ */
+package seleniumthree;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
+
+public class TestCase2 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\UpradeK\\Desktop\\SeleniumJava_Class\\Installables\\chromedriver.exe");
+				
+		//ChromeOptions option = new ChromeOptions();
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://newtours.demoaut.com/mercuryregister.php");
+		driver.findElement(By.name("firstName")).sendKeys("Kishor");
+		driver.findElement(By.name("lastName")).sendKeys("Uprade");
+		driver.findElement(By.name("phone")).sendKeys("9730897867");
+		driver.findElement(By.name("address1")).sendKeys("Test Address, 402 Link Road Pune");
+		driver.findElement(By.name("city")).sendKeys("Pune");
+		driver.findElement(By.name("state")).sendKeys("Maharashtra");
+		driver.findElement(By.name("postalCode")).sendKeys("411057");
+		Select country = new Select(driver.findElement(By.name("country")));
+		country.selectByVisibleText("INDIA");	
+		driver.findElement(By.name("email")).sendKeys("kishoruprade@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("kishor");
+		driver.findElement(By.name("confirmPassword")).sendKeys("kishor");
+		driver.findElement(By.name("register")).click();
+		driver.close();
+	}
+}

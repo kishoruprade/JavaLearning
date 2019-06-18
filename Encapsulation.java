@@ -1,19 +1,12 @@
-package encapsulation;
 
 public class Encapsulation {
-		private String name;   // declare a private instance/global variable
-	
-	public String getName(){
-		return name;
+	private double pie = 3.14;
+	public double getPI(){
+		return pie;
 	}
-	public void setName(String name){
-		this.name = name;
-	}
-	public static void main(String[] args) {
-		Encapsulation e = new Encapsulation();
-		e.setName("Kishor");
-		System.out.println(e.getName());
-
-	}
-
+   
 }
+ class AccessEncapulation extends Encapsulation{
+	 Encapsulation obj = new Encapsulation();
+	// obj.getPI();//
+ }

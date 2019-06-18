@@ -1,35 +1,41 @@
+package polymorphism;
+class Bank
+{
+public int getRateOfInterest() { return 0;}	
+}
+class SBI extends Bank
+{
+public int getRateOfInterset()
+{
+return 8;	
+}
+}
+class ICICI extends Bank
+{
+public int getRateOfInterest()
+{
+return 9;	
+}
+}
+class AXIS extends Bank
+{
+public int getRateOfInterest()
+{
+return 7;	
+}
+}
 
 public class MethodOverriding {
-	public static void main(String[] args) {
-		Bank b = new Bank();
-		SBI sbi = new SBI();
-		ICICI icici = new ICICI();
-		Axis axis = new Axis();
-		System.out.println("RBI Bank Rate of Interest min: "+b.getRateOfInterest());
-		System.out.println("SBI Bank rate of Interest"+sbi.getRateOfInterest());
-		System.out.println("ICICI Bank rate of Interest"+icici.getRateOfInterest());
-		System.out.println("Axis Bank rate of Interest"+axis.getRateOfIntered());
 
+	public static void main(String[] args)
+	{
+	
+		SBI s=new SBI();
+		System.out.println("Rate of Interest of SBI bank is: "+s.getRateOfInterset()+"%");
+		ICICI i=new ICICI();
+		System.out.println("Rate of Interest of AXIS bank is: "+i.getRateOfInterest()+"%");
+		
+		
 	}
 
-}
-class Bank{
-int getRateOfInterest(){
-	return 0;
-}}
-
-class SBI extends Bank{
-	int getRateOfInterest(){
-		return 8;
-	}
-}
-class ICICI extends Bank{
-	int getRateOfInterest(){
-		return 9;
-	}
-}
-class Axis extends Bank{
-	int getRateOfIntered(){
-		return 7;
-	}
 }
