@@ -1,41 +1,31 @@
-package polymorphism;
-class Bank
+class Parent
 {
-public int getRateOfInterest() { return 0;}	
-}
-class SBI extends Bank
+	
+void property()
 {
-public int getRateOfInterset()
-{
-return 8;	
+System.out.println("Gold");	
 }
 }
-class ICICI extends Bank
+class Child extends Parent
 {
-public int getRateOfInterest()
+void property()
 {
-return 9;	
-}
-}
-class AXIS extends Bank
-{
-public int getRateOfInterest()
-{
-return 7;	
-}
+System.out.println("Bike");	
 }
 
+}
 public class MethodOverriding {
 
-	public static void main(String[] args)
-	{
-	
-		SBI s=new SBI();
-		System.out.println("Rate of Interest of SBI bank is: "+s.getRateOfInterset()+"%");
-		ICICI i=new ICICI();
-		System.out.println("Rate of Interest of AXIS bank is: "+i.getRateOfInterest()+"%");
-		
-		
-	}
+public static void main(String[] args) 
+{
+Child obj=new Child();
+obj.property();  //Bike
+Parent obj2=new Parent();
+obj2.property(); //Gold
+Parent obj3=new Child();
+obj3.property();//Bike
+
+
+}
 
 }

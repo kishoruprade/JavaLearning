@@ -1,29 +1,19 @@
-package abstraction;
 interface printable
 {
-void print();
+void print();	
 }
-interface drawable extends printable
-{
-void draw();	
-}
-class A6 implements drawable
+class Print implements printable
 {
 public void print()
 {
-System.out.println("Hello");	
-}
-public void draw()
-{
-System.out.println("Draw");
+System.out.println("Print the page");	
 }
 }
 public class Interface {
 
 	public static void main(String[] args) {
-		A6 p1=new A6();
-		p1.print();
-	    p1.draw();
+		Print p=new Print();
+		p.print();
 
 	}
 

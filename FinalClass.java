@@ -1,17 +1,20 @@
-package variable;
-
-final class Bike1{
+package initial;
+class Fruit //usage of final keyword to the fruit class we can't extends it to the another class.
+{
 	
 }
-
-public class FinalClass /* extends Bike1 */ {  ///cannot inherit final class
-	
-	void run(){
-		System.out.println();
-	}
+class Apple extends Fruit
+{
+public void printMessage()
+{
+System.out.println("Prinint the message");	
+}
+}
+public class FinalClass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Apple obj=new Apple();
+				obj.printMessage();
 
 	}
 

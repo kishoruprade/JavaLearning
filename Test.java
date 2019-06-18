@@ -1,27 +1,28 @@
-package abstraction;
-interface eatable
+package initial;
+class Employee
 {
-default void eat()
+int id;
+String name;
+Employee(int i,String n)
 {
-System.out.println("eating");	
+ id=i;
+ name=n;
+ 
 }
-void abstractMethod();
-static void A1()
+public void printMessage()
 {
-System.out.println("print the message");	
+System.out.println("id:"+id +" \nname:"+name);	
 }
 }
-public class Test implements eatable
+
+
+public class Test
 {
-public void abstractMethod()
+public static void main(String[] args) 
 {
-	System.out.println("Abstract method");
-}
-	public static void main(String[] args) {
-		Test obj=new Test();
-		obj.eat();
-		eatable.A1();
-		obj.abstractMethod();
-	}
+	
+	Employee obj=new Employee(10, "sharad");
+	obj.printMessage();
+		}
 
 }

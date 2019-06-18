@@ -1,20 +1,24 @@
-package abstraction;
-abstract class Vehicle
+interface drawable2
 {
-abstract void run();	
+void print();	
 }
-abstract class Aeroplane
+interface printable2
 {
-abstract void run();	
+void print();	
 }
-public class MultipleInheritance extends Vehicle
+class A1 implements drawable2,printable2
 {
-public void run()
-{
-System.out.println("Speed limit is 40 kph");	
+	public void print()
+	{
+		System.out.println("Print the message");
+		
+	}
 }
+public class MultipleInheritance {
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		A1 obj=new A1();
+		obj.print();
 
 	}
 

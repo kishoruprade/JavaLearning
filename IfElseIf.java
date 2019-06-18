@@ -1,21 +1,32 @@
-package control.statements;
 
 public class IfElseIf {
 
 	public static void main(String[] args) {
-	int user =51;
-	if (user <=18){
-		System.out.println("User is 18 or younger");
-	}else if (user>18 && user<40){
-		System.out.println("User is in between 19 and 39");
 		
-	}
-	else if (user==45 || user==50){
-		System.out.println("User is either 45 or 50");
-		
-	}else {
-		System.out.println("User is 40 or older ");
-	}
+		int marks=Integer.parseInt(args[0]);
+		if(marks<50)
+		{
+			System.out.println("fail");
+		}else if(marks>=50 && marks<60)
+		{
+			System.out.println("D grade");
+		}else if(marks>=60 && marks<70)
+		{
+			System.out.println("c grade");
+		}else if(marks>=70 && marks<80)
+		{
+			System.out.println("B grade");
+		}else if(marks>=80 && marks<90)
+		{
+			System.out.println("A grade");
+		}else if(marks>=90 && marks<100)
+		{
+			System.out.println("A+ grade");
+		}else
+		{
+			
+			System.out.println("Invalid Marks");
+		}
 
 	}
 
