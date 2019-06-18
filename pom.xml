@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>POMMerCuryTours</groupId>
-  <artifactId>MercuryToursTest</artifactId>
+  <groupId>FreeCRMTestAutomation</groupId>
+  <artifactId>FreeCRMTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>MercuryToursTest</name>
+  <name>FreeCRMTest</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -15,75 +15,25 @@
   </properties>
 
   <dependencies>
-     <dependency>
+  
+   <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>3.141.59</version>
-    </dependency> 
+    </dependency>  
     
-
-<dependency>
+    <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>6.14.3</version>
+    <version>7.0.0-beta3</version>
     <scope>compile</scope>
 </dependency>
     
     <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
-    <version>4.1.0</version>
+    <version>4.0.1</version>
 </dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>4.1.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-scratchpad</artifactId>
-    <version>4.1.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml-schemas</artifactId>
-    <version>4.1.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>ooxml-schemas</artifactId>
-    <version>1.4</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-excelant</artifactId>
-    <version>4.1.0</version>
-</dependency>
-
-<dependency>
-    <groupId>org.kie.modules</groupId>
-    <artifactId>org-apache-poi</artifactId>
-    <version>6.5.0.Final</version>
-    <type>pom</type>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-contrib</artifactId>
-    <version>3.7-beta3</version>
-</dependency>
-
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-examples</artifactId>
-    <version>4.1.0</version>
-</dependency>
-    
     
     
   </dependencies>
