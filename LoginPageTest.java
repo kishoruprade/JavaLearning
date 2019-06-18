@@ -1,8 +1,5 @@
-package com.ttm.qa.testcases;
+package com.crm.qa.testcases;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,13 +24,21 @@ public class LoginPageTest extends TestBase {
 		loginPage = new LoginPage();		
 	}
 	
-		
-	@Test
+	@Test(priority=1)
+	public void loginPageTitleTest(){
+	String title =  loginPage.validateLoginPageTitle();
+	 Assert.assertEquals(title, "CRMPRO");
+	}
+	
+	@Test(priority=2)
+	public void crmLogoImageTest(){
+          boolean flag = loginPage.validateCRMLogo();
+          Assert.assertTrue(flag);
+	}
+	
+	@Test(priority=3)
 	public void loginTest(){
-		
-	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	driver.findElement(By.id("middel-2")).click();
-		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	

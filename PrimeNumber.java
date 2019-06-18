@@ -1,31 +1,30 @@
-package practicePrograms;
+package auto.interview.testprograms;
+
+import java.util.Scanner;
 
 public class PrimeNumber {
 
 	public static void main(String[] args) {
-		int i,flag=0;
-		
-		int n = 93;
-		
-		if(n==0||n==1){
-			System.out.println("Number is not Prime "+n);
-		}else{
-			for (i=2;i<n;i++){
-				if(n%i==0){
-					System.out.println("Number is not prime");
-					flag = 1;
-					break;
-				}
-			}
-			
-			if (flag==0){
-				System.out.println("Number is prime"+n);
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter any integer value: ");
+		int input = scan.nextInt();
+		if (checkPrime(input)){		
+			System.out.println("Input value "+input + " is a prime number.");
+		}		else {
+			System.out.println("Input value "+ input + " is not a prime number");
+		}
+
+	}
+	public static boolean checkPrime(int n){
+		if (n<=1){
+			return false;
+		}
+		for (int i=2;i<Math.sqrt(n);i++){
+			if (n% i ==0){
+				return false;
 			}
 		}
-		
-		
-		
-
+		return true;
 	}
 
 }
