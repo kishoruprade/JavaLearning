@@ -1,47 +1,45 @@
-package mercury.test;
+package com.ttm.qa.testcases;
 
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import mercury.base.TestBase;
-import mercury.pages.LoginPage;
-import mercury.pages.FlightFinderPage;
+import com.crm.qa.base.TestBase;
+import com.crm.qa.pages.HomePage;
+import com.crm.qa.pages.LoginPage;
 
-public class LoginPageTest extends TestBase{
+public class LoginPageTest extends TestBase {
 	
-	public static LoginPage loginPage;
-	public static FlightFinderPage searchFlight;
-	
+	LoginPage loginPage;
+	HomePage homePage;
+
 	public LoginPageTest(){
 		super();
 	}
 	
-	@BeforeMethod()
+	@BeforeMethod
 	public void setUp(){
-		intialization();
-		loginPage = new LoginPage();
+		initialization();
+		loginPage = new LoginPage();		
 	}
 	
-	
-	@Test(enabled=false)
-	public void LoginPageTitleTest(){
-		String loginTitle = loginPage.validateLoginPageTitle();
-		Assert.assertEquals(loginTitle, "Welcome: Mercury Tours");
-	}
-	
-	@Test(priority=1)
+		
+	@Test
 	public void loginTest(){
-		searchFlight = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		
-		
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	driver.findElement(By.id("middel-2")).click();
+		//homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
+	
 	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();
 	}
-
+	
 }

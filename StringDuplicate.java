@@ -1,26 +1,29 @@
-package infostretch;
+package string;
 
 public class StringDuplicate {
 
 	public static void main(String[] args) {
-	 String str = "Welcome";
-	 int count = 1;
-	 char ch  = ' ';
-	
-	 
-	 for (int i=0;i<str.length();i++){
-		 for (int j=i+1;j<str.length();j++){
-			 if(str.charAt(i)==str.charAt(j)){
-				ch = str.charAt(j);
-				count = count +1;
-				break;
-			 }
-			 }		
-		 
-	 }	
-	 
-	 System.out.print(ch+ " " +count);
+		String a = "ABCD";
+		char[] ca = a.toCharArray();
+		
+		String b = "CD";
+		char[] cb = b.toCharArray();
+		String str = " ";
 
+		// Logic for checking duplicate string in another string
+		for (int i=0;i<a.length();i++){		
+			for (int j=0;j<b.length();j++){
+				if (ca[i]==cb[j]){
+				System.out.print(cb[j]);
+				}
+			}			
+		}
+		System.out.println();
+		//Logic to reverse the string
+		for (int i=a.length()-1;i>=0;i--){
+			System.out.print(ca[i]);
+		}
+	
 	}
 
 }
