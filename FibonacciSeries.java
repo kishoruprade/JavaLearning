@@ -1,21 +1,24 @@
-package practicePrograms;
 
 public class FibonacciSeries {
 
 	public static void main(String[] args) {
-		int a = 0,c;
-		int b = 1,count=12;         //
+		// Fibonacci Series
 		
-		System.out.print(a+ " "+b);
+		int a = 0;
+		int b = 1;
+		int c ;
 		
-		for (int i=2;i<count;i++){
+		
+		System.out.println("The Fibonacci Series is: "+"/n"+a+" "+b);
+		for(int i=1;i<15;i++){		
+			
 			c=a+b;
-			if(c<100){                    //Find the series till 100
-			System.out.print(" "+c);
+			if(c<100){
+			System.out.println(c);
 			a=b;
 			b=c;
-			}
 			
+			}
 		}
 		
 
