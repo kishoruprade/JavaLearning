@@ -1,0 +1,121 @@
+Fifth Pass login building
+/*
+ * 1. Write a program which should allow the user to specify values for a, b and c
+ *  It should call the constructor to compute a solution of the addition.
+ *  If no error occurs, it should print the “you are correct”.
+ */
+public class ConstructorCallTwo {
+	int a,b,c;
+	
+	ConstructorCallTwo(int a,int b,int c){
+		this.a=a;
+		this.b=b;
+		this.c=c;
+	}
+	void add(){
+		System.out.print("Compute the three numbers: ");
+		System.out.println(a+b+c);
+	}
+
+	public static void main(String[] args) {
+		ConstructorCallTwo c = new ConstructorCallTwo(10,20,30);
+		c.add();
+	}
+
+}
+
+
+Approach 2
+/*
+ * 1. Write a program which should allow the user to specify values for a, b and c It should call the 
+ * constructor to compute a solution of the addition. If no error occurs, 
+ * it should print the “you are correct”.
+ */
+
+public class ConstructorCall {
+	
+	ConstructorCall(int a, int b, int c){
+		System.out.print("Compute the three numbers: ");
+		System.out.println(a+b+c);
+	}
+
+	public static void main(String[] args) {
+		ConstructorCall cc = new ConstructorCall(10,20,30);
+		System.out.println("You are correct");
+		
+
+	}
+
+}
+
+
+/*
+ */
+public class OverloadConstructor {
+	
+	OverloadConstructor(String s, String s1){
+		System.out.print("Addition of Two Strings: ");
+		System.out.println(s+s1);
+	}
+	OverloadConstructor(int a, int b){
+		System.out.print("Addition of Two integers: ");
+		System.out.println(a+b);
+	}
+	OverloadConstructor(double x, double y){
+		System.out.print("Addition of Two doubles: ");
+		System.out.println(x+y);
+		
+	}
+
+	public static void main(String[] args) {
+		OverloadConstructor s = new OverloadConstructor("Selenium","Java");
+		OverloadConstructor s1 = new OverloadConstructor(15,5);
+		OverloadConstructor s2 = new OverloadConstructor(14.00,15.64);
+	
+
+	}
+
+}
+
+Approach 2
+/*
+ * 2. Write a program to overload constructor for addition of 2 Strings, 2 Integers, 2 Double values.
+ */
+public class OverloadConstructorAddition {
+	String a, b;
+	int c, d;
+	double x,y;
+	
+	OverloadConstructorAddition(String a,String b){
+		this.a=a;
+		this.b=b;			
+	}
+	OverloadConstructorAddition(int c,int d){
+		this.c=c;
+		this.d=d;		
+	}
+	OverloadConstructorAddition(double x,double y){
+		this.x=x;
+		this.y=y;		
+	}
+	void addString(){
+		System.out.println(a+b);
+	}
+	void addInteger(){
+		System.out.println(c+d);
+	}
+	void addDouble(){
+		System.out.println(x+y);
+	}
+
+	public static void main(String[] args) {
+		OverloadConstructorAddition s = new OverloadConstructorAddition("Selenium","Java");
+		OverloadConstructorAddition s1 = new OverloadConstructorAddition(5,10);
+		OverloadConstructorAddition s2 = new OverloadConstructorAddition(5.23,10.78);
+		s.addString();
+		s1.addInteger();
+		s2.addDouble();
+
+	}
+
+}

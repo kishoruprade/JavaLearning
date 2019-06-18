@@ -1,0 +1,5 @@
+//tagname[@Atrribute='Value']
+//h1[contains(text(),'Welcome To Selenium Automation Testing')]
+
+
+//*[@class='featured-box']//*text()='Testing']
